@@ -1,5 +1,23 @@
 # BITCOIN-WIF-Recovery
+
 Find the Missing parts of a Wallet Import format(WIF) for Bitcoin
+
+# 5KYZdUEo39z3FPrtuX2QbbwGnNP5z ??? yyr2SC1j299sBCnWjss
+
+only works with WIF Starting 5
+
+    Enter WIF HERE or Know Starting Part : 5KYZdUEo39z3FPrtuX2QbbwGnNP5z
+    Leave Bank or Input Ending Part : yyr2SC1j299sBCnWjss
+    How Many Missing Chars : 3
+    Scanning :  22299  : Current TEST WIF=  5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss
+    Congraz FOUND!!!
+    PrivateKey=  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    Compressed Address =  1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV
+    Compressed WIF =  L4rK1yDtCWekvXuE6oXD9jCYfFNV2cWRpVuPLBcCU2z8TrisoyY1
+    Uncompressed =  1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN
+    Uncompressed WIF =  5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss
+    Scanning :  85530  : Current TEST WIF=  5KYZdUEo39z3FPrtuX2QbbwGnNP5zeRSyyr2SC1j299sBCnWjss
+
 ![image](https://user-images.githubusercontent.com/88630056/130690681-4a5bf4b8-1eb2-469b-b210-7c073f658640.png)
 
 ![image](https://user-images.githubusercontent.com/88630056/130690137-9b23b762-947a-45ce-a04e-7500c7a83e90.png)
