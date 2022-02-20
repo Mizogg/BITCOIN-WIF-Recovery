@@ -7,7 +7,6 @@ import binascii
 
 alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
-start= str(input('Enter WIF HERE or Know Starting Part : '))
 miss = int(input('How Many Missing Chars Enter 0 for none : '))
 
 def iter_all(count):
@@ -23,10 +22,17 @@ def iter_all(count):
 total=0 
 
 if miss == 0:
-    private_key_WIF = start
-    first_encode = base58.b58decode(private_key_WIF)
-    private_key_full = binascii.hexlify(first_encode)
-    private_key = private_key_full[2:-8]
+    startsingle= str(input('Enter Your WIF HERE : '))
+    if startsingle[0] == '5':
+        private_key_WIF = startsingle
+        first_encode = base58.b58decode(private_key_WIF)
+        private_key_full = binascii.hexlify(first_encode)
+        private_key = private_key_full[2:-8]
+    elif startsingle[0] in ['L', 'K']:
+        private_key_WIF = startsingle
+        first_encode = base58.b58decode(private_key_WIF)
+        private_key_full = binascii.hexlify(first_encode)
+        private_key = private_key_full[2:-10]
     key = Key.from_hex(str(private_key.decode('utf-8')))
     wif = bytes_to_wif(key.to_bytes(), compressed=False)
     wif1 = bytes_to_wif(key.to_bytes(), compressed=True)
@@ -38,14 +44,21 @@ if miss == 0:
     f.write('\nPrivateKey= ' + private_key.decode('utf-8') + '\nCompressed Address = ' + addr + '\nCompressed WIF = ' + wif1 + '\nUncompressed = ' + addr1 + '\nUncompressed WIF = ' + wif)
     f.close()
 else:
+    start= str(input('Leave Bank or Input Starting Part : '))
     stop = str(input('Leave Bank or Input Ending Part : '))
     add= str(input('Enter Bitcoin address Looking to match WIF = '))
     for a in iter_all(miss):
         total+=1
-        private_key_WIF = a + stop
-        first_encode = base58.b58decode(private_key_WIF)
-        private_key_full = binascii.hexlify(first_encode)
-        private_key = private_key_full[2:-8]
+        if start[0] == '5':
+            private_key_WIF = a + stop
+            first_encode = base58.b58decode(private_key_WIF)
+            private_key_full = binascii.hexlify(first_encode)
+            private_key = private_key_full[2:-8]
+        elif start[0] in ['L', 'K']:
+            private_key_WIF = a + stop
+            first_encode = base58.b58decode(private_key_WIF)
+            private_key_full = binascii.hexlify(first_encode)
+            private_key = private_key_full[2:-10]
         key = Key.from_hex(str(private_key.decode('utf-8')))
         wif = bytes_to_wif(key.to_bytes(), compressed=False)
         wif1 = bytes_to_wif(key.to_bytes(), compressed=True)
