@@ -1,6 +1,8 @@
 # BITCOIN-WIF-Recovery
 
-Check out the newer versions, Upto 10 missing WIF or HEX Characters
+Check out the newer versions, Upto 10 missing WIF or HEX Characters or DEC Characters
+
+![image](https://user-images.githubusercontent.com/88630056/178123924-144ba8b0-acb5-451d-8250-e2b7eb80ffb7.png)
 
 ![image](https://user-images.githubusercontent.com/88630056/178058522-bdd96e11-1b6f-48f0-a29b-9520df0c147e.png)
 
