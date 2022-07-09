@@ -1,4 +1,4 @@
-# BITCOIN-WIF-Recovery
+# BITCOIN-WIF/HEX/DEC-Recovery
 
 Check out the newer versions, Upto 10 missing WIF or HEX Characters or DEC Characters
 
